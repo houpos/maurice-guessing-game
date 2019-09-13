@@ -94,11 +94,11 @@ const hint = document.getElementById('btn-hint');
 const maurice = document.getElementById('maurice');
 let game = newGame();
 
-function reset() {
+function reset(pushedButton) {
     submission.value = '';
     response.innerText = '';
     document.getElementById('hints').innerHTML = null;
-    maurice.src = './images/maurice-unimpressed.png';
+    maurice.src =(pushedButton) ? './images/maurice-unimpressed.png' : './images/maurice-happy.png';
     guesses.innerHTML = null;
     game = newGame();
 }
@@ -109,22 +109,20 @@ submit.addEventListener('click', function () {
 
     if (result === 'You Win!') {
         maurice.src = './images/maurice-happy.png';
+        reset(false);
     } else if (result === 'You have already guessed that number.' || result === "You're a bit chilly." || result === "You're ice cold!") {
         maurice.src = './images/maurice-angry.png';
     } else if (result === "You're lukewarm." || result === "You're burning up!" ) {
         maurice.src = './images/maurice-annoyed.png';
     } else  {
         maurice.src = './images/maurice-unimpressed.png';
-    }
-
-    if (result === 'You Win!' || result === 'You Lose.') {
-        reset();
+        reset(false);
     }
     response.innerText = result;
 });
 
 restart.addEventListener('click', function() {
-    reset();
+    reset(true);
 });
 
 hint.addEventListener('click', function() {
