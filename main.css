@@ -1,38 +1,98 @@
 /* Write your CSS code in this file */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300');
 
-.game {
-    font-family: Arial, Helvetica, sans-serif;
-}
-.guess {
-    text-align: center;
-    display: block;
-}
-.answers {
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(6, 65, 65);
-    padding: 5px;
-    margin: 10px;
-    color:  rgb(6, 65, 65);
-}
-.extras {
-    text-align: center;
-    display:block;
-}
-h1 {
-    text-align: center;
-    background-color: rgb(6, 65, 65);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #header {
+    background-color: rgb(28, 184, 64); 
     padding: 20px;
-    color: lightgrey;
+    display: block;
+  }
 
+  h1, h3 {
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
 }
+
+h2 {
+    padding-top: 20px;
+}
+
+div {
+    /* border: 2px solid red;  */
+    text-align: center;
+    margin-bottom: 20px
+}
+
+div .half {
+    width: 50%; 
+    float:left;
+}
+
+div .main {
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#maurice {
+    display: inline-block; 
+    width: 60%;
+}
+
 input {
-    padding: 15px;
-    line-height: 26px;
-    font-size: 24px;
+ margin: 20px auto 0;
+ border: 2px solid rgb(28, 184, 65);
+ border-radius: 10px;
+ width: 30%;
+ font-size: 30px;
+ line-height: 35px;
+ height: 70px;
+ text-align: center;
+ padding: 10px;
+ background: transparent;
+ /* color: darkgray; */
 }
 
-.btn {
-    padding: 15px;
-    font-size: 24px;
+.button-success,
+.button-secondary {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    margin: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-success {
+    background: rgb(28, 184, 65); 
+}
+
+.button-secondary {
+    background: darkgray; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 10px;
 }

@@ -9,24 +9,34 @@
   </head>
 
   <body>
-    <div class="game">
+    <div id="header">
       <h1>The Guessing Game</h1>
-      <div class="guess">
-        <input type="text">
-        <button type="submit" class="btn">Guess</button>
-        <button type="button" class="btn">Hint</button>
+      <h3>Maurice is not impressed by you. Gain favor with him by guessing the number he's thinking. Try a number between 1-100.</h3>
+    </div>
+    <div>
+      <div class="half">
+        <img id="maurice" src="./images/maurice-unimpressed.png" />
+        <div style="width: 100%; ">
+          <ul id="hints">
+          </ul>
+        </div>
       </div>
-      <div class="answers">
-        <h3>Previous Answers:</h2>
-        <ul>
+      <div class="half main">
+        <div><h2 id="response"></h2></div>
+        <div id="namer-input">
+          <input type="text" id="submission">
+        </div>
+        <div>
+        <button type="submit" class="button-success" id="btn-submit">Guess</button>
+        <button type="button" class="button-secondary" id="btn-hint">Hint</button>
+        <button type="button" class="button-secondary" id="btn-restart">Restart</button>
+      </div>
+      <div>
+        <ul id="guesses">
         </ul>
       </div>
-      <div class="extras">
-        <button type="button" class="btn">Restart Game</button>
-      </div>
     </div>
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+    <script src='js/guessing-game.js'></script>
   </body>
 
 </html>
