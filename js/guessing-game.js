@@ -98,6 +98,7 @@ function reset() {
     submission.value = '';
     response.innerText = '';
     document.getElementById('hints').innerHTML = null;
+    maurice.src = './images/maurice-unimpressed.png';
     guesses.innerHTML = null;
     game = newGame();
 }
